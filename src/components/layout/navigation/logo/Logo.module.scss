@@ -1,0 +1,7 @@
+.logo {
+	@apply px-layout flex items-center justify-between;
+}
+
+.logoText {
+	@apply text-white text-2xl font-extrabold;
+}
