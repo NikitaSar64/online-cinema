@@ -1,7 +1,21 @@
+'use client'
+
 import React from 'react'
 
-const GenreMenu = () => {
-	return <div>GenreMenu</div>
-}
+import { SkeletonLoader } from '@components/ui/skeletonloader/SkeletonLoader'
 
-export default GenreMenu
+import { usePopularGenres } from '@hooks/usePopularGenres'
+
+import Menu from '../menu/Menu'
+
+export const GenreMenu = () => {
+	const { isLoading, data } = usePopularGenres()
+
+	return isLoading ? (
+		<div className="mx-11 mb-6">
+			<SkeletonLoader count={3} className="h-7 mt-6" />
+		</div>
+	) : (
+		<Menu menu={{ title: 'Popular genres', items: data || [] }} />
+	)
+}

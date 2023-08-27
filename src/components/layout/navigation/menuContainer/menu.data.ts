@@ -1,6 +1,6 @@
-import { MenuContainerProps } from './components/menu/Menu.props'
+import { MenuProps } from './components/menu/Menu.props'
 
-export const mainMenu: MenuContainerProps = {
+export const mainMenu: MenuProps = {
 	title: 'Menu',
 	items: [
 		{
@@ -26,7 +26,7 @@ export const mainMenu: MenuContainerProps = {
 	],
 }
 
-export const userMenu: MenuContainerProps = {
+export const userMenu: MenuProps = {
 	title: 'General',
 	items: [],
 }

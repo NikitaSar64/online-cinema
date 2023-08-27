@@ -1,9 +1,15 @@
-import { NextPage } from 'next'
+'use client'
+
+import { MainProvider } from 'providers/MainProvider'
 
 import HomePage from '@components/screens/home/Home'
 
-const Home: NextPage = () => {
-	return <HomePage />
+const Home = () => {
+	return (
+		<MainProvider>
+			<HomePage />
+		</MainProvider>
+	)
 }
 
 export default Home
