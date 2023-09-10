@@ -8,6 +8,12 @@ export interface IGenre {
 	icon: TypeMaterialIconName
 }
 
+type MovieGenre = {
+	genre: {
+		name: string;
+	}
+}
+
 export interface IMovie {
 	id: string
 	poster: string
@@ -15,10 +21,10 @@ export interface IMovie {
 	year: number
 	duration: number
 	country: string
-	description: string;
+	description: string
 	slug: string
 	name: string
-	genres: IGenre[]
+	genres: MovieGenre[]
 	actors?: IActor[]
 	rating?: number
 }

@@ -82,10 +82,10 @@ module.exports = {
 			addComponents({
 				'.btn-primary': {
 					backgroundColor: primary,
-					colors: '#fff',
+					color: '#fff',
 					borderRadius: '0.65rem',
-					transition: 'backgroundColor .3s easy-in-out',
-					$hover: {
+					transition: 'background-color .3s easy-in-out',
+					'&:hover': {
 						backgroundColor: '#ff0009',
 					},
 				},
@@ -96,7 +96,7 @@ module.exports = {
 					transition: 'text-decoration-color .3s easy-in-out',
 					textDecoration: 'underline',
 					textDecorationColor: 'rgba(255, 255, 255, 0.2)',
-					$hover: {
+					'&:hover': {
 						textDecorationColor: 'rgba(255, 255, 255, 0.9)',
 					},
 				},

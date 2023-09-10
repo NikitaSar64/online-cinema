@@ -1,1 +1,1 @@
-export const getMovieUrl = (slug: string) => `/movie/slug/${slug}`;
+export const getMovieUrl = (slug: string) => `/movie/${slug}`;

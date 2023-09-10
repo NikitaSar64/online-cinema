@@ -1,3 +1,5 @@
+"use client"
+
 import { FC, HTMLAttributes } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
