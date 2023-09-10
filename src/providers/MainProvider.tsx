@@ -4,6 +4,10 @@ import { FC, HTMLAttributes } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
 import Layout from '@components/layout/Layout'
+import { ReduxToast } from './ReduxToast'
+import { Provider } from 'react-redux'
+import { store } from '@store/store'
+import { ProgressBar } from './ProgressBar'
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -15,8 +19,15 @@ const queryClient = new QueryClient({
 
 export const MainProvider: FC<HTMLAttributes<HTMLElement>> = ({ children }) => {
 	return (
-		<QueryClientProvider client={queryClient}>
-			<Layout>{children}</Layout>
-		</QueryClientProvider>
+			<ProgressBar>
+				<Provider store={store}>
+					<QueryClientProvider client={queryClient}>
+						<ReduxToast/>
+						<Layout>
+							{children}
+						</Layout>
+					</QueryClientProvider>
+				</Provider>
+			</ProgressBar>
 	)
 }
